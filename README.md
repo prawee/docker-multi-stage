@@ -24,3 +24,20 @@ yarn start
 docker build -t nginx-react .
 docker images
 ```
+
+### Run
+
+```bash
+docker ps
+docker run -d -p 8080:80 --name react-webapp nginx-react
+```
+
+## Update
+
+```bash
+docker images -f="dangling=true"
+docker stop react-webapp
+docker rm react-webapp
+docker image prune
+docker run -d -p 8081:80 --name react-webapp-8081 nginx-react
+```
