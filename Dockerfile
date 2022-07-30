@@ -4,4 +4,4 @@ RUN yarn install
 RUN yarn build
 
 FROM nginx
-COPY ./build /usr/share/nginx/html
+COPY --from=builder ./build /usr/share/nginx/html

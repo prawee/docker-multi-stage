@@ -15,3 +15,12 @@ yarn install
 ```bash
 yarn start
 ```
+
+## Docker
+
+### Build
+
+```bash
+docker build -t nginx-react .
+docker images
+```
